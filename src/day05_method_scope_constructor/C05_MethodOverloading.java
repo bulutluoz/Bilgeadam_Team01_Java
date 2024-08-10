@@ -4,6 +4,11 @@ public class C05_MethodOverloading {
 
     public static void main(String[] args) {
 
+        topla(3,5); // topla int int  ==> int int : 8
+
+        topla(4.5,6); // topla double int ==> double int : 10.5
+
+        topla(4,5.5); // topla int double ==> double double : 9.5
 
     }
 
