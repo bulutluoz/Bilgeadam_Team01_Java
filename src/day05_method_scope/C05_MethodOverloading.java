@@ -1,4 +1,4 @@
-package day05_method_scope_constructor;
+package day05_method_scope;
 
 public class C05_MethodOverloading {
 
