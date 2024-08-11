@@ -16,7 +16,7 @@ public class C08_Araba {
 
     }
 
-    C08_Araba(){
+    public C08_Araba(){
         /*
             Biz marka, model ve fiyat parametrelerine sahip constructor olusturunca
             Java default constructor'i sildi
@@ -31,22 +31,27 @@ public class C08_Araba {
          */
     }
 
+    C08_Araba(String marka, String model ,
+              String yakit , int yil , int fiyat){
+
+     this.marka = marka;
+     this.model = model;
+     this.yakit = yakit;
+     this.yil = yil;
+     this.fiyat = fiyat;
 
 
+    }
+
+    // Code menusunden intelliJ'e constructor olusturtabiliriz
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    public C08_Araba(String marka, String model, String yakit, int fiyat) {
+        this.marka = marka;
+        this.model = model;
+        this.yakit = yakit;
+        this.fiyat = fiyat;
+    }
 
     @Override
     public String toString() {
