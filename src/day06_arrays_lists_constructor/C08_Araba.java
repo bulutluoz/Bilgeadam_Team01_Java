@@ -2,13 +2,13 @@ package day06_arrays_lists_constructor;
 
 public class C08_Araba {
 
-    String marka = "Marka belirtilmemis";
-    String model = "Model belirtilmemis";
-    String yakit = "Yakit belirtilmemis";
-    int yil = 1900;
-    int fiyat;
+    public String marka = "Marka belirtilmemis";
+    public String model = "Model belirtilmemis";
+    public String yakit = "Yakit belirtilmemis";
+    public int yil = 1900;
+    public int fiyat;
 
-    C08_Araba(String mrk ,String mdl, int fyt){
+    public C08_Araba(String mrk ,String mdl, int fyt){
 
         marka = mrk;
         model = mdl;
@@ -31,7 +31,7 @@ public class C08_Araba {
          */
     }
 
-    C08_Araba(String marka, String model ,
+    public C08_Araba(String marka, String model ,
               String yakit , int yil , int fiyat){
 
      this.marka = marka;
