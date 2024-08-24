@@ -13,4 +13,12 @@ public class C05_Varargs {
     }
 
 
+    public static void islemYap( int... sayilar  ){
+
+        /*
+            Varargs kullaniminda dikkat edilecek tek bir konu var
+            bir method'da parametre olarak varargs kullanilmissa
+            en son parametre olmak ZORUNDADIR
+         */
+    }
 }
