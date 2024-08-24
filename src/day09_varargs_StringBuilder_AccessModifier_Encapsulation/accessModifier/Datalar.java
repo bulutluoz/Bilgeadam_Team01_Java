@@ -8,19 +8,21 @@ public class Datalar {
     public int sayiPublic = 50;
 
     private void methodPrivate(){
-
+        System.out.println("private method calisti");
     }
     void methodDefaultAccMod(){
-
+        System.out.println("Default acc mod.'a sahip  method calisti");
     }
     protected void methodProtected(){
-
+        System.out.println("protected method calisti");
     }
     public void methodPublic(){
 
-
+        System.out.println("public method calisti");
 
     }
+
+
 
     public static void main(String[] args) {
 
@@ -38,5 +40,8 @@ public class Datalar {
 
         datalar1.sayiPublic = 70;
         datalar1.methodPublic();
+
+
+
     }
 }
