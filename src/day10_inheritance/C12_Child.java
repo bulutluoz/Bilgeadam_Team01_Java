@@ -26,7 +26,9 @@ public class C12_Child extends C11_Parent{
 
     public static void main(String[] args) {
 
-        C12_Child child2 = new C12_Child("a",1);
+        C12_Child child3 = new C12_Child("Ali");
+
+        // C12_Child child2 = new C12_Child("a",1);
 
         // C12_Child child1 = new C12_Child(1.1);
 
