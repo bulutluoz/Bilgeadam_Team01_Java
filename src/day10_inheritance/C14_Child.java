@@ -1,5 +1,10 @@
 package day10_inheritance;
 
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class C14_Child extends C13_Parent{
 
     String str = "Java Guzeldir";
@@ -39,6 +44,7 @@ public class C14_Child extends C13_Parent{
         System.out.println(tel); // 216 2343434
         System.out.println(this.tel); // 312 3454545
         // System.out.println(super.tel); // CTE parent class'da tel yok
+
 
 
 
