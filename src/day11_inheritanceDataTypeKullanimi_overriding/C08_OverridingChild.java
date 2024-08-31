@@ -42,9 +42,40 @@ public class C08_OverridingChild extends C07_OverridingParent{
 
     }
 
+    public static void method6(){
+        // static method parent class'da olsa da
+        // overriding olarak kabul etmez
+    }
 
 
+   protected void method7(){
+        // her ne kadar signature'a dahil olmasa da
+        // access modifier da overridding'de onemlidir
+        // "child parent'i kisitlayamaz"
+        // child class'daki overriding method'un access modifier'i
+        // parent class'daki overridden method'un access modifier'indan
+        // DAHA DAR OLAMAZ
+   }
 
+    public double method8(){
+        // her ne kadar signature'a dahil olmasa da
+        // return type da overridding'de onemlidir
+        // eger overridden method'un access modifier'i
+        // void veya primitive ise
+        // overriding method'un access modifier'i AYNI olmalidir
+        return 0;
+    }
+
+
+    public C06_AvciKuslar method9(){
+        // eger return type non-primitive ise
+        // overridden method'un  return type'i
+        // overriding method'un return type'i ile
+        // ya ayni data turu olmalidir,
+        // veya parent class'i olmalidir
+
+        return null;
+    }
 
 
 

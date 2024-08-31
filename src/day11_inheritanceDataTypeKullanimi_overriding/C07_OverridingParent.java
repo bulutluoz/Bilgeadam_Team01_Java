@@ -42,6 +42,35 @@ public class C07_OverridingParent {
 
 
 
+    public static void method6(){
+
+
+    }
+
+
+    protected void method7(){
+        // private
+        // default access modifier
+        // protected
+        // public
+
+
+    }
+
+    public double method8(){
+        return 0;
+
+
+
+
+
+    }
+
+
+    public C04_Hayvanlar method9(){
+
+        return null;
+    }
 
 
 
