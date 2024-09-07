@@ -14,7 +14,13 @@ public class C02_MultipleExceptions_ParentChild {
             parent child iliskisi varsa
             daha once gordugumuz 4 yontem uygulanabilir
             AMMA parent child iliskisinden dolayi
-            dikkat etmemiz gereken siralama olmalidir
+            dikkat etmemiz gereken "siralama" olmalidir
+
+            Parent exception daha kapsamli oldugundan
+            Child exception'in yakalayabilecegi tum exception'lari da YAKALAYACAKTIR
+
+            Bu durumda ONCE child exception, SONRA parent exception yazilmalidir
+
 
          */
 
