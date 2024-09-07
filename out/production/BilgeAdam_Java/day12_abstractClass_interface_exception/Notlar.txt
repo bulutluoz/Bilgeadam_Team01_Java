@@ -1,4 +1,2 @@
-
-
 Ders sirasinda alinan notlar
 1- Java candir
