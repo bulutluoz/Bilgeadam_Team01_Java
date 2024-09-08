@@ -229,4 +229,88 @@ public class MapDepo {
 
     }
 
+    public static void tumSoyisimleriBuyukHarfYap(){
+
+        // update oldugu icin key ve value'ye birlikte ihtiyac var
+
+        // 1.adim : key'leri bir Set olarak kaydedelim
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();
+        // [101, 102, 103, 104, 105, 106, 107]
+
+        // 2.adim bir Set olarak kaydettigimiz key'leri tek tek ele alalim
+        //        o key'i ve key'e ait value'yu birlikte degerlendirelim
+
+        for ( Integer eachKey : ogrenciKeySeti
+        ) {
+            // 3. adim eachKey'e ait  eachValue'yu kaydedelim
+            String eachValue = ogrenciMap.get(eachKey); // Ali-Can-11-H-MF
+
+            // 4.adim bilgilere ulasabilmek icin value'u split ile array yapalim
+            String[] eachValueArr = eachValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5.adim array'de soyismi buyuk harfe cevrilelim
+            eachValueArr[1] = eachValueArr[1].toUpperCase();
+
+            //6- soyismi array'de update ettik
+            //   map'i update edebilmek icin array'i yeniValue haline getirelim
+
+            String yeniValue = String.join("-",eachValueArr);
+
+            // 7- eachKey ve yeni value ile map'i guncelleyelim
+            ogrenciMap.put(eachKey,yeniValue);
+
+        }
+
+    }
+
+    public static void yilSonuSiniflariArtir(){
+
+        // update oldugu icin key ve value'ye birlikte ihtiyac var
+
+        // 1.adim : key'leri bir Set olarak kaydedelim
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();
+        // [101, 102, 103, 104, 105, 106, 107]
+
+        // 2.adim bir Set olarak kaydettigimiz key'leri tek tek ele alalim
+        //        o key'i ve key'e ait value'yu birlikte degerlendirelim
+
+        for ( Integer eachKey : ogrenciKeySeti
+        ) {
+            // 3. adim eachKey'e ait  eachValue'yu kaydedelim
+            String eachValue = ogrenciMap.get(eachKey); // Ali-Can-11-H-MF
+
+            // 4.adim bilgilere ulasabilmek icin value'u split ile array yapalim
+            String[] eachValueArr = eachValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5.adim array'de sinif bilgisini update edelim
+
+            switch (eachValueArr[2]){
+
+                case "9" :
+                    eachValueArr[2]="10";
+                    break;
+
+                case "10" :
+                    eachValueArr[2]="11";
+                    break;
+
+                case "11" :
+                    eachValueArr[2]="12";
+                    break;
+
+                case "12" :
+                    eachValueArr[2]="Mezun";
+                    break;
+            }
+
+            //6- array'de update ettik
+            //   map'i update edebilmek icin array'i yeniValue haline getirelim
+
+            String yeniValue = String.join("-",eachValueArr);
+
+            // 7- eachKey ve yeni value ile map'i guncelleyelim
+            ogrenciMap.put(eachKey,yeniValue);
+        }
+    }
+
 }
