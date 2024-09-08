@@ -12,5 +12,18 @@ public class C07_NumaraliBolumListesiOlusturma extends MapDepo{
 
         System.out.println(ogrenciMap.get(104)); // Ayse-Can-10-H-MF
 
+
+        bolumListesiYazdirma("MF");
+        //MF bolumundeki ogrenci listesi
+        //101 Ali Can 11 H
+        //104 Ayse Can 10 H
+        //106 Sevgi Can 10 K
+
+        bolumListesiYazdirma("tm");
+        //tm bolumundeki ogrenci listesi
+        //102 Veli Cem 10 K
+        //103 Ali Cem 11 K
+        //105 Sevgi Cem 11 M
+
     }
 }

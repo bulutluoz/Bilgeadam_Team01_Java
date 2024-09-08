@@ -136,6 +136,97 @@ public class MapDepo {
 
         // 2.adim bir Set olarak kaydettigimiz key'leri tek tek ele alalim
         //        o key'i ve key'e ait value'yu birlikte degerlendirelim
+
+        System.out.println(arananBolum + " bolumundeki ogrenci listesi");
+
+        for ( Integer eachKey : ogrenciKeySeti
+             ) {
+            // 3. adim eachKey'e ait  eachValue'yu kaydedelim
+            String eachValue  = ogrenciMap.get(eachKey); // Ali-Can-11-H-MF
+
+            // 4.adim bilgilere ulasabilmek icin value'u split ile array yapalim
+            String[] eachValueArr = eachValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5. array'den istedigimiz kontrolleri yapip, istedigimiz bilgileri alabiliriz
+            // bolumu MF olan ogrencilerin
+            // numara, isim, soyisim, sinif ve subelerini yazdirin
+
+            if (eachValueArr[4].equalsIgnoreCase(arananBolum)){
+
+                System.out.println(
+                       eachKey + " " +
+                       eachValueArr[0]+ " " +
+                       eachValueArr[1]+ " " +
+                       eachValueArr[2]+ " " +
+                       eachValueArr[3]
+
+                );
+            }
+
+
+        }
+    }
+
+    public static void numaraliSinifListesiYazdir(int arananSinif){
+
+        // 1.adim : key'leri bir Set olarak kaydedelim
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();
+        // [101, 102, 103, 104, 105, 106, 107]
+
+        // 2.adim bir Set olarak kaydettigimiz key'leri tek tek ele alalim
+        //        o key'i ve key'e ait value'yu birlikte degerlendirelim
+
+        System.out.println(arananSinif + ". sinif ogrenci listesi");
+
+        for ( Integer eachKey : ogrenciKeySeti
+        ) {
+            // 3. adim eachKey'e ait  eachValue'yu kaydedelim
+            String eachValue  = ogrenciMap.get(eachKey); // Ali-Can-11-H-MF
+
+            // 4.adim bilgilere ulasabilmek icin value'u split ile array yapalim
+            String[] eachValueArr = eachValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5. array'den istedigimiz kontrolleri yapip, istedigimiz bilgileri alabiliriz
+            // 11.sinif ogrencilerinin
+            // numara, isim, soyisim ve subelerini yazdirin
+
+            if ( (arananSinif+"").equals(eachValueArr[2]) ){
+
+                System.out.println(
+
+                        eachKey + " " +
+                        eachValueArr[0] + " " +
+                        eachValueArr[1] + " " +
+                        eachValueArr[3]
+                );
+            }
+
+
+        }
+
+    }
+
+    public static void numaraIleOgrenciSoyisminiGuncelleme(int ogrenciNo , String yeniSoyisim){
+
+        // 1. adim verilen ogrenci numarasindan value'ye ulasip kaydedelim
+        String ogrenciValue = ogrenciMap.get(ogrenciNo); // Ali-Can-11-H-MF
+
+        // 2. adim bilgilere ulasabilmek icin, split edip kaydedelim
+         String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+
+         // 3. adim istenen update'i array'de yapalim
+        ogrenciValueArr[1] = yeniSoyisim;
+
+        // 4.adim : array'de update'i yaptik
+        //          ANCAKKK map'i guncellemek icin array'in yeni halini
+        //          birlestirerek yeniValue'yu elde etmeliyiz
+
+        String yeniValue = String.join("-",ogrenciValueArr);
+
+        // 5.adim : ogrenci no ve yeni value'yu kullanarak map'i guncelleyelim
+
+        ogrenciMap.put(ogrenciNo,yeniValue);
+
     }
 
 }
