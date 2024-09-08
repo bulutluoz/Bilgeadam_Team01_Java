@@ -3,6 +3,7 @@ package day14_maps;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MapDepo {
 
@@ -87,7 +88,6 @@ public class MapDepo {
 
     }
 
-
     public static void sinifSubeListesiYazdirma(int arananSinif, String arananSube){
 
         // 1- value'leri kaydedelim
@@ -122,6 +122,20 @@ public class MapDepo {
         }
 
 
+    }
+
+    public static void bolumListesiYazdirma(String arananBolum){
+
+        // EGER key ve value birlikte kullanilacaksa
+        // oncelikle key'leri kaydetmeliyiz
+
+        // 1.adim : key'leri bir Set olarak kaydedelim
+         Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();
+         // [101, 102, 103, 104, 105, 106, 107]
+
+
+        // 2.adim bir Set olarak kaydettigimiz key'leri tek tek ele alalim
+        //        o key'i ve key'e ait value'yu birlikte degerlendirelim
     }
 
 }
